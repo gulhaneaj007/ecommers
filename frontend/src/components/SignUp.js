@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import {useNavigate} from  'react-router-dom'
-
 const  SignUp=()=> {
   const [name,setName] =useState('');
   const [email,setEmail] =useState('');
@@ -19,6 +18,7 @@ const  SignUp=()=> {
       });
       result = await result.json;
       console.log(result)
+      localStorage.setItem("usrinfo",JSON.stringify(result))
       navigate("/") 
   }
 
