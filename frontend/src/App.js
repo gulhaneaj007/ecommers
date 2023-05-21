@@ -10,15 +10,16 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <Routes element={<PrivateComponent/>}>
-          <Route path="/" element={<h1>Dashboard</h1>}/>
-          <Route path="/Add" element={<h1>AddProducts</h1>}/>
-          <Route path="/Update" element={<h1>Update Products</h1>}/>
-          <Route path="/logout" element={<h1>logout</h1>}/>
-          <Route path="/Profile" element={<h1>Profile</h1>}/>
+        <Routes>
+          <Route element={<PrivateComponent/>} >
+            <Route path="/" element={<h1>Dashboard</h1>}/>
+            <Route path="/Add" element={<h1>AddProducts</h1>}/>
+            <Route path="/Update" element={<h1>Update Products</h1>}/>
+            <Route path="/logout" element={<h1>logout</h1>}/>
+            <Route path="/Profile" element={<h1>Profile</h1>}/>
+          </Route>
+          <Route path="/SignUp" element={<SignUp/>} />
         </Routes>
-        <Route path="/SignUp" element={<SignUp/>} />
-
       </BrowserRouter>
       <Footerdash />
     </div>
